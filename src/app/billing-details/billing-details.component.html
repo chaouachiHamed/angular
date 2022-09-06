@@ -1,0 +1,6 @@
+<div *ngFor="let command of facture.command"> {{command.quantity}}   {{command.product.name}} à {{command.product.price|currency:'EUR':'symbol':'1.0-2':'fr'}} 
+ : {{getPrixTTC(command.product,command.product.price,command.quantity) | currency:'EUR':'symbol':'1.0-2':'fr'}}
+</div>
+<h1 class="col-md-12"></h1>
+<div class="col-md-12">Montant des taxes : {{calculeTaxe() | currency:'EUR':'symbol':'1.1-2':'fr'}}</div>
+Total : {{calculeTotale() |currency:'EUR':'symbol':'1.1-2':'fr'}}

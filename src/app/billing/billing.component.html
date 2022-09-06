@@ -1,0 +1,4 @@
+
+<ul>
+  <li *ngFor="let invoice of billing" ><a [routerLink]="['/billing',invoice.ID]" routerLinkActive="router-link-active" >{{invoice.ID}}  {{invoice.name}}</a></li>
+</ul>
